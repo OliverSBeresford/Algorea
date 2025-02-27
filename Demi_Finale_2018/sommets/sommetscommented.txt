@@ -1,0 +1,18 @@
+nbnombres = int(input())  # Read the number of input values
+num = 0  # Total number of peaks
+num1 = int(input())  # Left value
+num2 = int(input())  # Center value
+
+# Iterate from index 2 to (nbnombres - 1)
+for i in range(2, nbnombres):
+    num3 = int(input())  # Right value
+
+    # Check if num2 is greater than both num1 and num3 (peak)
+    if num2 > num1 and num2 > num3:
+        num += 1
+
+    # Move the values to the right
+    num1 = num2
+    num2 = num3
+
+print(num)  # Final count
